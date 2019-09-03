@@ -48,13 +48,9 @@ let middleimg = document.getElementById('middle-img');
 middleimg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 const navi = document.querySelectorAll('a');
-navi[0].innerText = siteContent['nav']['nav-item-1'];
-navi[1].innerText = siteContent['nav']['nav-item-2'];
-navi[2].innerText = siteContent['nav']['nav-item-3'];
-navi[3].innerText = siteContent['nav']['nav-item-4'];
-navi[4].innerText = siteContent['nav']['nav-item-5'];
-navi[5].innerText = siteContent['nav']['nav-item-6'];
-//is there a better way to specifically add content without using indices for tags that are the exact same?
+navi.forEach((item, index) => {
+  item.innerText = siteContent['nav'][`nav-item-${index+1}`]
+})
 
 navi.forEach(element => {
   element.style.color = 'green';
