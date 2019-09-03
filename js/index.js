@@ -54,6 +54,7 @@ navi[2].innerText = siteContent['nav']['nav-item-3'];
 navi[3].innerText = siteContent['nav']['nav-item-4'];
 navi[4].innerText = siteContent['nav']['nav-item-5'];
 navi[5].innerText = siteContent['nav']['nav-item-6'];
+//is there a better way to specifically add content without using indices for tags that are the exact same?
 
 navi.forEach(element => {
   element.style.color = 'green';
@@ -105,10 +106,8 @@ info[8].innerText = siteContent['footer']['copyright'];
 // navi[3].textContent = 'Features';
 // navi[4].textContent = 'About';
 // navi[5].textContent = 'Contact';
-// // is there a better way to specifically add content without using indices for tags that are the exact same?
 
 // const title = document.querySelector('h1');
-// // why didn't getElementsByTagName('h1') not work?
 // title.textContent = 'DOM IS AWESOME'
 
 // const btn = document.querySelector('button');
